@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-Very-dark-blue: hsl(233, 47%, 7%);
+    --color-Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --color-Soft-violet: hsl(277, 64%, 61%);
+    --color-overlay: rgba(104, 28, 151, 0.562);
+    --color-White-main-heading-stats: hsl(0, 0%, 100%);
+    --color-Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --paragraph-font-small: 0.8rem;
+    --paragraph-font-medium: ;
+    --paragraph-font-large: 1.25rem;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--color-Very-dark-blue);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.stats-preview {
+    max-width: 70rem;
+    max-height: 29.125rem;
+    display: flex;
+    background: var(--color-Dark-desaturated-blue);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.stats-preview-header {
+    padding: 4.125rem  7.5rem 0 4.125rem;
+}
+
+.stats-preview-heading {
+    color: var(--color-White-main-heading-stats);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.875rem;
+    font-weight: var(--font-weight-bold);
+}
+
+.stats-preview-heading span {
+    color: var(--color-Soft-violet);
+}
+
+.stats-preview-paragraph {
+    margin-bottom: 5.875rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-Slightly-transparent-white);
+    line-height: 1.7;
+    font-size: var(--paragraph-font-small);
+}
+
+.stats-preview-rating {
+    color: var(--color-Slightly-transparent-white);
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.stats-preview-rating p {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--paragraph-font-large);
+    font-family: 'Inter', sans-serif;
+    color: var(--color-White-main-heading-stats);
+}
+
+.stats-preview-rating span {
+    padding-top: 99px;
+    color: var(--color-Slightly-transparent-white);
+    font-size: var(--paragraph-font-small);
+    font-weight: var(--font-weight-regular);
+}
+
+.stats-preview-picture {
+    position: relative;
+    width: 50%;
+}
+
+.stats-preview-picture img {
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    /* bottom: 0; */
+    right: 0;
+    /* left: 0; */
+    background-color: var(--color-overlay);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+
+    .stats-preview-paragraph {
+        font-size: 1.25rem;
+        margin-bottom: 3.875rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .stats-preview {
+        text-align: center;
+        flex-direction: column;
+        max-width: 30rem;
+        max-height: 70.125rem;
+    }
+
+    .stats-preview-picture {
+        order: -1;
+        width: 100%;
+        height: 30rem;
+    }
+
+    .stats-preview-header {
+        padding: 4.125rem  5.5rem 0 4.125rem;
+    }
+
+    .stats-preview-paragraph {
+        font-size: var(--paragraph-font-large);
+        margin-bottom: 1.875rem;
+
+    }
+
+    .stats-preview-rating {
+       flex-direction: column;
+    }
+
+    .stats-preview-rating p {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        padding-bottom: 3rem;
+    }
+
+    .stats-preview-rating p:last-child {
+        padding-bottom: 5.75rem;
+      }
+}
